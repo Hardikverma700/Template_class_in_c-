@@ -1,0 +1,106 @@
+#include<iostream>
+using namespace std;
+// here we will discuss template class (generic class)
+// c++ support generic function and generic classes
+// generic function are template function and generic classes are template classes
+// NOTE:- Generic means that one class which object have special data member 
+// but if we want the same operations and all things same except the data type then we have to use the
+// template class // template funtion incase of function
+// with the help of template class and template function we do not have to make a separate class for the specific
+// data type paramters or any variable type in the class
+template <class T>
+class arithametic
+{
+	private:
+		T a;
+		T b;
+	public:
+		arithametic(T x, T y); // this is parameteric constructor
+		T add(); // this is member function
+		T sub(); // this is also a member function
+		
+};
+template <class T>
+arithametic<T>::arithametic(T x, T y) // here we has to pass the <T> as the parameter always
+{
+	a = x;
+	b = y;
+}
+template <class T>
+T arithametic<T>::add() // here also we have to pass the <T> as the parameter 
+{
+	T c = a + b;
+	return c;
+}
+template <class T>
+T arithametic<T>::sub()
+{
+	T c = a - b;
+	return c;
+}
+
+int main()
+{ 	
+	arithametic<int> ar(10,5); // here we create the object of class arithametic and we use <int> beside 
+	// the class name to tell the compiler that which type of data we want in the template class
+	cout<<ar.add()<<endl;
+	arithametic<float> ar1(1.5, 1.2); // here we give <float> beside the classname 
+	// bcz we want to make a obect of template class where we will use float values where
+	// will be the template effects will be seen
+	cout<<ar1.add()<<endl;
+	
+	return 0;
+}
+#include<iostream>
+using namespace std;
+// here we will discuss template class (generic class)
+// c++ support generic function and generic classes
+// generic function are template function and generic classes are template classes
+// NOTE:- Generic means that one class which object have special data member 
+// but if we want the same operations and all things same except the data type then we have to use the
+// template class // template funtion incase of function
+// with the help of template class and template function we do not have to make a separate class for the specific
+// data type paramters or any variable type in the class
+template <class T>
+class arithametic
+{
+	private:
+		T a;
+		T b;
+	public:
+		arithametic(T x, T y); // this is parameteric constructor
+		T add(); // this is member function
+		T sub(); // this is also a member function
+		
+};
+template <class T>
+arithametic<T>::arithametic(T x, T y) // here we has to pass the <T> as the parameter always
+{
+	a = x;
+	b = y;
+}
+template <class T>
+T arithametic<T>::add() // here also we have to pass the <T> as the parameter 
+{
+	T c = a + b;
+	return c;
+}
+template <class T>
+T arithametic<T>::sub()
+{
+	T c = a - b;
+	return c;
+}
+
+int main()
+{ 	
+	arithametic<int> ar(10,5); // here we create the object of class arithametic and we use <int> beside 
+	// the class name to tell the compiler that which type of data we want in the template class
+	cout<<ar.add()<<endl;
+	arithametic<float> ar1(1.5, 1.2); // here we give <float> beside the classname 
+	// bcz we want to make a obect of template class where we will use float values where
+	// will be the template effects will be seen
+	cout<<ar1.add()<<endl;
+	
+	return 0;
+}
